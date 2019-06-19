@@ -1,0 +1,32 @@
+<resources>
+        <string name="app_name">SchoolWash</string>
+
+        <!-- TODO: Remove or change this placeholder text -->
+        <string name="hello_blank_fragment">Hello blank fragment</string>
+        <string name="login">Login</string>
+        <string name="password">Password</string>
+        <string name="email">Email address</string>
+        <string name="sign_out">Sign Out</string>
+        <string name="form">Form</string>
+        <string name="submit">Submit</string>
+        <string name="school">Name of school</string>
+        <string name="head">Head of school</string>
+        <string name="female_students">Number female students</string>
+        <string name="male_students">Number of male students</string>
+        <string name="staff_number">Number of staff</string>
+        <string name="male_toilets">Number of male toilets</string>
+        <string name="female_toilets">Number of female toilets</string>
+        <string name="staff_toilets">Number of staff toilets</string>
+        <string name="taps">Number of taps</string>
+        <string name="dust">Numbers dust bins</string>
+        <string name="report">Report</string>
+        <string name="school_name">School</string>
+        <string name="head_master">Head Master Name:</string>
+        <string name="boys">No of boys Students:</string>
+        <string name="girls">No of girls Students:</string>
+        <string name="toilet">No of female toilets:</string>
+        <string name="dustBin">No of dust bins:</string>
+        <string name="sToilet">No of staff toilets:</string>
+        <string name="fToilet">No of female toilets:</string>
+        <string name="mToilet">No of male toilets:</string>
+</resources>

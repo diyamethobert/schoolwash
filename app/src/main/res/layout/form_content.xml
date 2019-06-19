@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        xmlns:tools="http://schemas.android.com/tools">
+
+                <EditText
+                        android:id="@+id/school_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:autofillHints="@string/school"
+                        android:background="@drawable/shape"
+                        android:hint="@string/school"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textAlignment="gravity"
+                        tools:targetApi="o" />
+
+                <EditText
+                        android:id="@+id/head_of_school"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/school_name"
+                        android:layout_margin="10dp"
+                        android:autofillHints="@string/head"
+                        android:background="@drawable/shape"
+                        android:hint="@string/head"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        tools:targetApi="o" />
+
+                <EditText
+                        android:id="@+id/number_female_students"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/head_of_school"
+                        android:layout_margin="10dp"
+                        android:autofillHints="@string/female_students"
+                        android:background="@drawable/shape"
+                        android:hint="@string/female_students"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        tools:targetApi="o" />
+
+                <EditText
+                        android:id="@+id/number_male_students"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/number_female_students"
+                        android:layout_margin="10dp"
+                        android:autofillHints="@string/male_students"
+                        android:background="@drawable/shape"
+                        android:hint="@string/male_students"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        tools:targetApi="o" />
+
+                <EditText
+                        android:id="@+id/number_staffs"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/number_male_students"
+                        android:layout_margin="10dp"
+                        android:autofillHints="@string/staff_number"
+                        android:background="@drawable/shape"
+                        android:hint="@string/staff_number"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        tools:targetApi="o" />
+
+                <EditText
+                        android:id="@+id/number_male_toilets"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/number_staffs"
+                        android:layout_margin="10dp"
+                        android:autofillHints="@string/male_toilets"
+                        android:background="@drawable/shape"
+                        android:hint="@string/male_toilets"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        tools:targetApi="o" />
+
+                <EditText
+                        android:id="@+id/number_female_toilets"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/number_male_toilets"
+                        android:layout_margin="10dp"
+                        android:autofillHints="@string/female_toilets"
+                        android:background="@drawable/shape"
+                        android:hint="@string/female_toilets"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        tools:targetApi="o" />
+
+                <EditText
+                        android:id="@+id/number_staff_toilets"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/number_female_toilets"
+                        android:layout_margin="10dp"
+                        android:autofillHints="@string/staff_toilets"
+                        android:background="@drawable/shape"
+                        android:hint="@string/staff_toilets"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        tools:targetApi="o" />
+
+                <EditText
+                        android:id="@+id/number_taps"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/number_staff_toilets"
+                        android:layout_margin="10dp"
+                        android:autofillHints="@string/taps"
+                        android:background="@drawable/shape"
+                        android:hint="@string/taps"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        tools:targetApi="o" />
+
+                <EditText
+                        android:id="@+id/number_dust_bins"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/number_taps"
+                        android:layout_margin="10dp"
+                        android:autofillHints="@string/dust"
+                        android:background="@drawable/shape"
+                        android:hint="@string/dust"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        tools:targetApi="o" />
+
+                <Button
+                        android:id="@+id/submit_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/number_dust_bins"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/solid"
+                        android:padding="10dp"
+                        android:text="@string/submit" />
+
+</RelativeLayout>
