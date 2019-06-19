@@ -138,5 +138,39 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
+                <TextView
+                        android:id="@+id/staffs"
+                        android:textSize="18sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dustBins"
+                        android:text="@string/staff" />
+                <TextView
+                        android:id="@+id/staffs_view"
+                        android:textSize="18sp"
+                        android:text="@string/report"
+                        android:layout_below="@+id/dustBins"
+                        android:layout_toEndOf="@+id/staffs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                <TextView
+                        android:id="@+id/taps"
+                        android:textSize="18sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/staffs_view"
+                        android:text="@string/tap" />
+                <TextView
+                        android:id="@+id/taps_view"
+                        android:textSize="18sp"
+                        android:text="@string/report"
+                        android:layout_below="@+id/staffs_view"
+                        android:layout_toEndOf="@+id/taps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
         </RelativeLayout>
 </android.support.v7.widget.CardView>

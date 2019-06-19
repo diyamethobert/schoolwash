@@ -12,6 +12,8 @@ public class FormData {
     private String headName;
     @SerializedName("sFemale")
     private String sFemale;
+    @SerializedName("sMale")
+    private String sMale;
     @SerializedName("mToilets")
     private String mToilets;
     @SerializedName("sToilets")
@@ -27,12 +29,12 @@ public class FormData {
     @SerializedName("response")
     private String response;
 
-    public FormData(int id, String schoolName, String headName, String sFemale, String mToilets,
-    String sToilets, String noStaff, String fToilets, String taps, String dustBins, String response) {
+    public FormData(int id, String schoolName, String headName, String sFemale, String sMale, String mToilets, String sToilets, String noStaff, String fToilets, String taps, String dustBins, String response) {
         this.id = id;
         this.schoolName = schoolName;
         this.headName = headName;
         this.sFemale = sFemale;
+        this.sMale = sMale;
         this.mToilets = mToilets;
         this.sToilets = sToilets;
         this.noStaff = noStaff;
@@ -72,6 +74,14 @@ public class FormData {
 
     public void setsFemale(String sFemale) {
         this.sFemale = sFemale;
+    }
+
+    public String getsMale() {
+        return sMale;
+    }
+
+    public void setsMale(String sMale) {
+        this.sMale = sMale;
     }
 
     public String getmToilets() {

@@ -34,11 +34,13 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ViewHolder
         viewHolder.school.setText(viewHolder.data.getSchoolName());
         viewHolder.head.setText(viewHolder.data.getHeadName());
         viewHolder.no_of_girls.setText(viewHolder.data.getsFemale());
-        viewHolder.no_of_boys.setText(viewHolder.data.getNoStaff());
+        viewHolder.no_of_boys.setText(viewHolder.data.getsMale());
         viewHolder.staff_toilets.setText(viewHolder.data.getfToilets());
         viewHolder.dustBins_view.setText(viewHolder.data.getDustBins());
         viewHolder.mToilets_view.setText(viewHolder.data.getmToilets());
         viewHolder.sToilets_view.setText(viewHolder.data.getsToilets());
+        viewHolder.staffs_view.setText(viewHolder.data.getNoStaff());
+        viewHolder.taps_view.setText(viewHolder.data.getTaps());
     }
 
     @Override
@@ -48,7 +50,7 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         private TextView school, head, no_of_girls, no_of_boys, staff_toilets, mToilets_view,
-                sToilets_view, dustBins_view;
+                sToilets_view, dustBins_view, staffs_view,taps_view;
         private FormData data;
 
         public ViewHolder(@NonNull View itemView) {
@@ -61,6 +63,8 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ViewHolder
             mToilets_view = itemView.findViewById(R.id.mToilets_view);
             sToilets_view = itemView.findViewById(R.id.sToilets_view);
             dustBins_view = itemView.findViewById(R.id.dustBins_view);
+            taps_view = itemView.findViewById(R.id.taps_view);
+            staffs_view = itemView.findViewById(R.id.staffs_view);
         }
     }
 }

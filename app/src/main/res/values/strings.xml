@@ -29,4 +29,6 @@
         <string name="sToilet">No of staff toilets:</string>
         <string name="fToilet">No of female toilets:</string>
         <string name="mToilet">No of male toilets:</string>
+        <string name="staff">No of staffs:</string>
+        <string name="tap">No of taps:</string>
 </resources>
