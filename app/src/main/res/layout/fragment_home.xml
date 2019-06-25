@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/home_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".HomeFragment">
+        tools:context=".UI.HomeFragment"
+        android:orientation="vertical">
 
         <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
@@ -19,17 +20,11 @@
                 </android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
 
-        <TextView
-                android:id="@+id/space"
-                android:layout_marginTop="?attr/actionBarSize"
-                android:layout_width="match_parent"
-                android:layout_height="2dp" />
-
-
         <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/logo"
-                android:layout_below="@+id/space"
-                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:layout_margin="10dp"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@drawable/pic"
@@ -38,13 +33,12 @@
 
 
         <android.support.v7.widget.RecyclerView
-                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
                 android:id="@+id/view_menu"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/logo"
                 android:layout_marginTop="10dp"
                 tools:listitem="@layout/home_layout">
         </android.support.v7.widget.RecyclerView>
 
-</RelativeLayout>
+</LinearLayout>

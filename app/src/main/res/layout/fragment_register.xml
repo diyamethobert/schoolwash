@@ -1,68 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".UI.LoginFragment">
+        tools:context=".UI.RegisterFragment">
         <LinearLayout
-                android:layout_gravity="center"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                         xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/profile_image"
+                        android:layout_gravity="center"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:src="@drawable/profile"
-                        android:layout_marginBottom="40dp"
+                        android:layout_marginBottom="50dp"
                         app:civ_border_width="5dp"
                         app:civ_border_color="@color/colorBoarder"/>
 
+                <EditText
+                        android:id="@+id/id_full_name"
+                        android:hint="@string/name"
+                        android:padding="10dp"
+                        android:inputType="textEmailAddress"
+                        android:textAlignment="gravity"
+                        android:layout_margin="10dp"
+                        android:autofillHints="@string/email"
+                        android:background="@drawable/shape"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        tools:targetApi="o">
+                </EditText>
 
                 <EditText
-                        android:id="@+id/id_email"
+                        android:id="@+id/id_email_register"
                         android:hint="@string/email"
                         android:padding="10dp"
                         android:inputType="textEmailAddress"
                         android:textAlignment="gravity"
                         android:layout_margin="10dp"
-                        android:autofillHints="@string/app_name"
+                        android:autofillHints="@string/email"
                         android:background="@drawable/shape"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         tools:targetApi="o" />
                 <EditText
-                        android:id="@+id/id_password"
+                        android:id="@+id/id_password_register"
                         android:hint="@string/password"
                         android:padding="10dp"
                         android:inputType="textPassword"
                         android:layout_margin="10dp"
-                        android:autofillHints="@string/app_name"
+                        android:autofillHints="@string/password"
                         android:background="@drawable/shape"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         tools:targetApi="o" />
 
                 <Button
-                        android:id="@+id/login_button"
+                        android:id="@+id/register_button"
                         android:padding="10dp"
                         android:layout_margin="10dp"
-                        android:text="@string/login"
+                        android:text="@string/register"
                         android:background="@drawable/solid"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                <TextView
-                        android:id="@+id/goToRegister"
-                        android:padding="15dp"
-                        android:layout_margin="10dp"
-                        android:textColor="@color/colorBlack"
-                        android:textAlignment="center"
-                        android:text="@string/account"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
         </LinearLayout>

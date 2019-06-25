@@ -1,7 +1,6 @@
-package com.sanga.schoolwash;
+package com.sanga.schoolwash.Adapters;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,7 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.navigation.Navigation;
+import com.sanga.schoolwash.R;
+import com.sanga.schoolwash.UI.HomeFragment;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     private String [] categories;

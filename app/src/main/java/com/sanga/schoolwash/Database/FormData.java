@@ -1,4 +1,4 @@
-package com.sanga.schoolwash;
+package com.sanga.schoolwash.Database;
 
 import com.google.gson.annotations.SerializedName;
 

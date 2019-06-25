@@ -4,7 +4,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".HelpFragment">
+        tools:context=".UI.HelpFragment">
 
         <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
@@ -15,9 +15,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="?attr/actionBarSize"
                         app:popupTheme="@style/AppTheme.PopupOverlay">
+                        <ImageView
+                                android:id="@+id/back_from_help"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow_back_black_24dp"
+                                android:contentDescription="@string/app_name"
+                                android:padding="10dp" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/help"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="20sp" />
                 </android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
 
-
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/help_view"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

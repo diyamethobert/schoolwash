@@ -1,4 +1,4 @@
-package com.sanga.schoolwash;
+package com.sanga.schoolwash.UI;
 
 
 import android.os.Bundle;
@@ -13,6 +13,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.sanga.schoolwash.Adapters.ReportAdapter;
+import com.sanga.schoolwash.Database.Api;
+import com.sanga.schoolwash.Database.ApiInterface;
+import com.sanga.schoolwash.Database.FormData;
+import com.sanga.schoolwash.R;
 
 import java.util.List;
 

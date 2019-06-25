@@ -1,4 +1,4 @@
-package com.sanga.schoolwash;
+package com.sanga.schoolwash.UI;
 
 
 import android.app.ProgressDialog;
@@ -13,6 +13,11 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.sanga.schoolwash.Database.Api;
+import com.sanga.schoolwash.Database.ApiInterface;
+import com.sanga.schoolwash.Database.Users;
+import com.sanga.schoolwash.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;

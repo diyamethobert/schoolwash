@@ -1,4 +1,4 @@
-package com.sanga.schoolwash;
+package com.sanga.schoolwash.Database;
 
 
 import java.util.List;
@@ -45,5 +45,13 @@ public interface ApiInterface {
             @Field("sToilets") String sToilets,
             @Field("taps") String taps,
             @Field("dustBins") String dustBins
+    );
+
+    @FormUrlEncoded
+    @POST("new_user.php")
+    Call<Users> register(
+            @Field("name") String name,
+            @Field("email") String email,
+            @Field("password") String password
     );
 }

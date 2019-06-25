@@ -1,4 +1,4 @@
-package com.sanga.schoolwash;
+package com.sanga.schoolwash.UI;
 
 
 import android.content.Intent;
@@ -20,8 +20,11 @@ import android.widget.Toast;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import com.sanga.schoolwash.Adapters.HomeAdapter;
+import com.sanga.schoolwash.R;
 
-public class HomeFragment extends Fragment implements HomeAdapter.AdapterListener{
+
+public class HomeFragment extends Fragment implements HomeAdapter.AdapterListener {
     private RecyclerView recyclerView;
     private GridLayoutManager manager;
     private RelativeLayout layout;

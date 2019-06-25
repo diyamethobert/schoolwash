@@ -6,171 +6,280 @@
         app:cardElevation="10dp"
         android:layout_margin="2dp">
 
-        <RelativeLayout
-                android:layout_width="wrap_content"
+        <TableLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <TextView
-                        android:id="@+id/view_school"
-                        android:layout_marginStart="10dp"
-                        android:text="@string/school_name"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
+
+                <TableRow
+                        android:id="@+id/row_1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                <Button
-                        android:id="@+id/divider"
-                        android:background="@color/colorBoarder"
-                        android:layout_below="@+id/view_school"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBoarder">
+
+                        <TextView
+                                android:id="@+id/view_school"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:padding="20dp"
+                                android:text="@string/school_name"
+                                android:textColor="@color/colorBlack" />
+                </TableRow>
+
+                <TableRow
+                        android:id="@+id/row_2"
                         android:layout_width="match_parent"
-                        android:layout_height="1dp" />
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp">
 
-                <TextView
-                        android:id="@+id/head"
-                        android:textSize="18sp"
-                        android:layout_marginStart="10dp"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/divider"
-                        android:text="@string/head_master" />
-                <TextView
-                        android:id="@+id/head_master"
-                        android:textSize="18sp"
-                        android:text="@string/report"
-                        android:layout_below="@+id/divider"
-                        android:layout_toEndOf="@+id/head"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                <TextView
-                        android:id="@+id/boys"
-                        android:textSize="18sp"
-                        android:layout_marginStart="10dp"
-                        android:layout_below="@+id/head"
-                        android:text="@string/boys"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content" />
-                <TextView
-                        android:id="@+id/boys_view"
-                        android:textSize="18sp"
-                        android:text="@string/report"
-                        android:layout_below="@+id/head"
-                        android:layout_toEndOf="@+id/boys"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                <TextView
-                        android:id="@+id/no_girls"
-                        android:textSize="18sp"
-                        android:layout_marginStart="10dp"
-                        android:text="@string/girls"
-                        android:layout_below="@+id/boys_view"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content" />
-                <TextView
-                        android:id="@+id/no_girls_view"
-                        android:textSize="18sp"
-                        android:text="@string/report"
-                        android:layout_below="@+id/boys_view"
-                        android:layout_toEndOf="@+id/no_girls"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/head_master"
+                                android:textColor="@color/colorBlack" />
 
-                <TextView
-                        android:id="@+id/toilets"
-                        android:textSize="18sp"
-                        android:layout_marginStart="10dp"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/no_girls"
-                        android:text="@string/toilet" />
-                <TextView
-                        android:id="@+id/toilets_view"
-                        android:textSize="18sp"
-                        android:text="@string/report"
-                        android:layout_below="@+id/no_girls"
-                        android:layout_toEndOf="@+id/toilets"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                <TextView
-                        android:id="@+id/mToilets"
-                        android:textSize="18sp"
-                        android:layout_marginStart="10dp"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/toilets_view"
-                        android:text="@string/mToilet" />
-                <TextView
-                        android:id="@+id/mToilets_view"
-                        android:textSize="18sp"
-                        android:text="@string/report"
-                        android:layout_below="@+id/toilets_view"
-                        android:layout_toEndOf="@+id/mToilets"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                <TextView
-                        android:id="@+id/sToilets"
-                        android:textSize="18sp"
-                        android:layout_marginStart="10dp"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/mToilets"
-                        android:text="@string/sToilet" />
-                <TextView
-                        android:id="@+id/sToilets_view"
-                        android:textSize="18sp"
-                        android:text="@string/report"
-                        android:layout_below="@+id/mToilets"
-                        android:layout_toEndOf="@+id/sToilets"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                <TextView
-                        android:id="@+id/dustBins"
-                        android:textSize="18sp"
-                        android:layout_marginStart="10dp"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/sToilets_view"
-                        android:text="@string/dustBin" />
-                <TextView
-                        android:id="@+id/dustBins_view"
-                        android:textSize="18sp"
-                        android:text="@string/report"
-                        android:layout_below="@+id/sToilets_view"
-                        android:layout_toEndOf="@+id/dustBins"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/staff"
+                                android:textColor="@color/colorBlack" />
 
-                <TextView
-                        android:id="@+id/staffs"
-                        android:textSize="18sp"
-                        android:layout_marginStart="10dp"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/dustBins"
-                        android:text="@string/staff" />
-                <TextView
-                        android:id="@+id/staffs_view"
-                        android:textSize="18sp"
-                        android:text="@string/report"
-                        android:layout_below="@+id/dustBins"
-                        android:layout_toEndOf="@+id/staffs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                <TextView
-                        android:id="@+id/taps"
-                        android:textSize="18sp"
-                        android:layout_marginStart="10dp"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/staffs_view"
-                        android:text="@string/tap" />
-                <TextView
-                        android:id="@+id/taps_view"
-                        android:textSize="18sp"
-                        android:text="@string/report"
-                        android:layout_below="@+id/staffs_view"
-                        android:layout_toEndOf="@+id/taps"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/girls"
+                                android:textColor="@color/colorBlack" />
+                </TableRow>
 
+                <TableRow
+                        android:id="@+id/row_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp">
 
-        </RelativeLayout>
+                        <TextView
+                                android:id="@+id/head_master"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/app_name"
+                                android:textColor="@color/colorBlack" />
+
+                        <TextView
+                                android:id="@+id/staffs_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/app_name"
+                                android:textColor="@color/colorBlack" />
+
+                        <TextView
+                                android:id="@+id/no_girls_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="#E6E6FA"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/app_name"
+                                android:textColor="@color/colorBlack" />
+
+                </TableRow>
+
+                <TableRow
+                        android:id="@+id/row_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/boys"
+                                android:textColor="@color/colorBlack" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/mToilet"
+                                android:textColor="@color/colorBlack" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/sToilet"
+                                android:textColor="@color/colorBlack" />
+
+                </TableRow>
+                <TableRow
+                        android:id="@+id/row_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp">
+
+                        <TextView
+                                android:id="@+id/boys_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/app_name"
+                                android:textColor="@color/colorBlack" />
+
+                        <TextView
+                                android:id="@+id/mToilets_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/app_name"
+                                android:textColor="@color/colorBlack" />
+
+                        <TextView
+                                android:id="@+id/sToilets_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/app_name"
+                                android:textColor="@color/colorBlack" />
+
+                </TableRow>
+                <TableRow
+                        android:id="@+id/row_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/toilet"
+                                android:textColor="@color/colorBlack" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/dustBin"
+                                android:textColor="@color/colorBlack" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/tap"
+                                android:textColor="@color/colorBlack" />
+
+                </TableRow>
+
+                <TableRow
+                        android:id="@+id/row_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp">
+
+                        <TextView
+                                android:id="@+id/toilets_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/app_name"
+                                android:textColor="@color/colorBlack" />
+
+                        <TextView
+                                android:id="@+id/dustBins_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/app_name"
+                                android:textColor="@color/colorBlack" />
+
+                        <TextView
+                                android:id="@+id/taps_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@color/colorTable"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/app_name"
+                                android:textColor="@color/colorBlack" />
+
+                </TableRow>
+
+        </TableLayout>
 </android.support.v7.widget.CardView>

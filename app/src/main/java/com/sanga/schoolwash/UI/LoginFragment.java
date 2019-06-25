@@ -1,4 +1,4 @@
-package com.sanga.schoolwash;
+package com.sanga.schoolwash.UI;
 
 
 import android.app.ProgressDialog;
@@ -12,10 +12,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+
+import com.sanga.schoolwash.Database.Api;
+import com.sanga.schoolwash.Database.ApiInterface;
+import com.sanga.schoolwash.Database.Users;
+import com.sanga.schoolwash.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,6 +36,7 @@ public class LoginFragment extends Fragment {
     private ProgressDialog progressDialog;
     private ApiInterface apiInterface;
     private static final String TAG = "TAG";
+    private TextView textView;
 
 
     public LoginFragment() {
@@ -53,6 +60,7 @@ public class LoginFragment extends Fragment {
         loginButton = view.findViewById(R.id.login_button);
         apiInterface = Api.getApi().create(ApiInterface.class);
         scrollView = view.findViewById(R.id.scroll_view);
+        textView = view.findViewById(R.id.goToRegister);
     }
 
     private void setListener(){
@@ -60,6 +68,12 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 validate();
+            }
+        });
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_registerFragment);
             }
         });
     }
