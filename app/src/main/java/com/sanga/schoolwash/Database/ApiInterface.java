@@ -28,9 +28,8 @@ public interface ApiInterface {
             @Field("password") String password
     );
 
-    @FormUrlEncoded
-    @POST("update.php")
-    Call<Users> updateStatus(@Field("id") int id);
+    @GET("counter.php")
+    Call<Users> getTotalSchools();
 
     @FormUrlEncoded
     @POST("new_data.php")

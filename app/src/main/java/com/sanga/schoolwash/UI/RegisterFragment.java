@@ -115,10 +115,9 @@ public class RegisterFragment extends Fragment {
             public void onResponse(@NonNull Call<Users> call, @NonNull Response<Users> response) {
                 progressDialog.dismiss();
                 if (response.isSuccessful() && response.body() != null){
-                    if (response.body().getResponse().contains("User is successful")){
+                    if (response.body().getResponse().contains("Registered successful")){
                         if (getActivity() != null)
                             getActivity().onBackPressed();
-                        //Toast.makeText(getContext(), "Your successful registered", Toast.LENGTH_LONG).show();
                     }else Toast.makeText(getContext(),response.body().getResponse(), Toast.LENGTH_LONG).show();
                 }else{
                     if (response.body() != null)

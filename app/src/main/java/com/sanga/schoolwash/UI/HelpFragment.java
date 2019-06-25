@@ -67,13 +67,23 @@ public class HelpFragment extends Fragment {
     }
 
     private void populateArray(){
-        helpArrayList.add(new Help("One"));
-        helpArrayList.add(new Help("Two"));
-        helpArrayList.add(new Help("Three"));
-        helpArrayList.add(new Help("Four"));
+        helpArrayList.add(new Help("On home page, tap : at the top right corner then click log out"));
 
-        HelpClass No = new HelpClass("Numbers", helpArrayList);
+        HelpClass No = new HelpClass("Do want to log out?", helpArrayList);
         helpClassArrayList.add(No);
+
+        ArrayList<Help> formHelp = new ArrayList<>();
+        formHelp.add(new Help("On home page, click Form and form page will appear then fill all fields " +
+                "because all fields required and then click submit button and make sure success massage display"));
+
+        HelpClass form = new HelpClass("Do want to fill data of students?", formHelp);
+        helpClassArrayList.add(form);
+
+        ArrayList<Help> report = new ArrayList<>();
+        report.add(new Help("On home page, click report to view list of added schools and the total number of schools registered"));
+
+        HelpClass view = new HelpClass("Do want to view report?", report);
+        helpClassArrayList.add(view);
     }
 
     private void setDisplay(){

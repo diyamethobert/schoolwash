@@ -14,8 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
+import android.widget.LinearLayout;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -27,7 +26,7 @@ import com.sanga.schoolwash.R;
 public class HomeFragment extends Fragment implements HomeAdapter.AdapterListener {
     private RecyclerView recyclerView;
     private GridLayoutManager manager;
-    private RelativeLayout layout;
+    private LinearLayout layout;
 
 
     public HomeFragment() {
@@ -102,7 +101,7 @@ public class HomeFragment extends Fragment implements HomeAdapter.AdapterListene
             Navigation.findNavController(recyclerView).navigate(R.id.action_homeFragment_to_reportFragment);
         }
         if (value.contains("Help")){
-            Toast.makeText(getContext(), value, Toast.LENGTH_SHORT).show();
+            Navigation.findNavController(recyclerView).navigate(R.id.action_homeFragment_to_helpFragment);
         }
         if (value.contains("Form")){
            Navigation.findNavController(recyclerView).navigate(R.id.action_homeFragment_to_formFragment);

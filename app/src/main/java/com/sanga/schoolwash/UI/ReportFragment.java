@@ -12,12 +12,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sanga.schoolwash.Adapters.ReportAdapter;
 import com.sanga.schoolwash.Database.Api;
 import com.sanga.schoolwash.Database.ApiInterface;
 import com.sanga.schoolwash.Database.FormData;
+import com.sanga.schoolwash.Database.Users;
 import com.sanga.schoolwash.R;
 
 import java.util.List;
@@ -36,6 +38,8 @@ public class ReportFragment extends Fragment {
     private ReportAdapter adapter;
     private ApiInterface apiInterface;
     private List<FormData>dataList;
+    private  String counter;
+    private TextView textView;
 
 
 
@@ -52,6 +56,7 @@ public class ReportFragment extends Fragment {
         initialize(view);
         getReport();
         setOnClickListener();
+        getTotalNoOfSchools();
         pullToRefresh();
         return view;
     }
@@ -61,6 +66,7 @@ public class ReportFragment extends Fragment {
         refreshLayout = view.findViewById(R.id.refresh);
         progressBar = view.findViewById(R.id.loading_report);
         imageView = view.findViewById(R.id.back_from_report);
+        textView = view.findViewById(R.id.reportTitle);
         linearLayout = new LinearLayoutManager(getContext());
         apiInterface = Api.getApi().create(ApiInterface.class);
     }
@@ -117,6 +123,27 @@ public class ReportFragment extends Fragment {
     private void setViews(){
         recyclerView.setLayoutManager(linearLayout);
         recyclerView.setAdapter(adapter);
+    }
+
+    private void getTotalNoOfSchools(){
+        Call<Users> call = apiInterface.getTotalSchools();
+        call.enqueue(new Callback<Users>() {
+            @Override
+            public void onResponse(@NonNull Call<Users> call, @NonNull Response<Users> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    counter = response.body().getResponse();
+                    setCounter();
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<Users> call, @NonNull Throwable t) {
+            }
+        });
+    }
+
+    private void setCounter() {
+        textView.setText(String.format("Report of %s school(s)", counter));
     }
 
 }
